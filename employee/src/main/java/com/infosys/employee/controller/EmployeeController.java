@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+//import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -44,9 +44,12 @@ public class EmployeeController
 	private EmployeeDTO getEmployee(@PathVariable("id") int id)   
 	{  
 		EmployeeDTO employeeDTO = employeeService.getEmployeeById(id);  
-		ResponseEntity<EmployeeTrainingDTO[]> entity =  new RestTemplate().getForEntity("http://localhost:8082/employee-training/id/" + employeeDTO.getEmp_id(), EmployeeTrainingDTO[].class);
-		 List<EmployeeTrainingDTO> employeeTraining = Arrays.asList(entity.getBody());
-		 employeeDTO.setEmployeeTrainings(employeeTraining);
+//		ResponseEntity<EmployeeTrainingDTO[]> entity =  new RestTemplate().getForEntity("http://localhost:8082/employee-training/id/" + employeeDTO.getEmp_id(), EmployeeTrainingDTO[].class);
+//		 List<EmployeeTrainingDTO> employeeTraining = Arrays.asList(entity.getBody());
+//		 employeeDTO.setEmployeeTrainings(employeeTraining);
+		EmployeeTrainingDTO[] employeeTraining = new RestTemplate().getForObject("http://localhost:8082/employee-training/id/" + employeeDTO.getEmp_id(), EmployeeTrainingDTO[].class);
+		List<EmployeeTrainingDTO> employeeTrainingDTO = Arrays.asList(employeeTraining);
+		employeeDTO.setEmployeeTrainings(employeeTrainingDTO);
 		return employeeDTO;
 	}  
 	
