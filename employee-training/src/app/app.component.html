@@ -1,0 +1,19 @@
+<mat-toolbar class="header">
+  <div>
+    <img src="assets/Infosys-Logo.png" class="logo">
+  </div>
+  <div class="title">Employee Training Management Portal</div>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav opened mode="side">
+    <div>
+      <a routerLink="employee" routerLinkActive="active" class="details" mat-button>Employee Details</a>
+    </div>
+    <div>
+      <a routerLink="training" routerLinkActive="active" class="details" mat-button>Training Details</a>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

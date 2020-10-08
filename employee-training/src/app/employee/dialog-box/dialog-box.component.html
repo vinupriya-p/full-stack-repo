@@ -1,0 +1,26 @@
+<div class="center" *ngIf="add">
+    <div mat-dialog-content>
+        <p>Employee has been added Successfully.</p>
+    </div>
+    <div mat-dialog-actions>
+        <button class="button" mat-button (click)="close()">Close</button>
+    </div>
+</div>
+<div class="center" *ngIf="!add && !update">
+    <div mat-dialog-content>
+        <p>There has been some issue in adding the employee or 
+            Employee already exists!
+            </p>
+    </div>
+    <div mat-dialog-actions>
+        <button class="button" mat-button (click)="close()">Close</button>
+    </div>
+</div>
+<div class="center" *ngIf="update">
+    <div mat-dialog-content>
+        <p>Employee details have been updated Successfully.</p>
+    </div>
+    <div mat-dialog-actions>
+        <button class="button" mat-button (click)="close()">Close</button>
+    </div>
+</div>

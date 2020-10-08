@@ -1,0 +1,12 @@
+.button 
+{
+    margin: 1rem;
+    background-color: #1482AC;
+    color: white;
+    font-size: 16px;
+}
+.center
+{
+    display: flex;
+    justify-content: center;
+}

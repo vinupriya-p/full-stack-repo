@@ -1,0 +1,13 @@
+<ag-grid-angular
+    style="height: 500px;"
+    class="ag-theme-alpine"
+    [rowData]="httpdata"
+    [columnDefs]="columnDefs"
+>
+</ag-grid-angular>
+
+<div class="center">
+  <a routerLink="add-employee" class="button" mat-button>Add Employee</a>
+  <a routerLink="modify-employee" class="button" mat-button>Modify Employee</a>
+  <a routerLink="remove-employee" class="button" mat-button>Remove Employee</a>
+</div>

@@ -1,0 +1,27 @@
+mat-form-field
+{
+    margin-top: 1rem;
+    margin-left: 10%;
+    font-size: 16px;
+}
+
+mat-label
+{
+    font-size: 16px;
+}
+.button 
+{
+    margin: 1rem;
+    background-color: #1482AC;
+    color: white;
+    font-size: 16px;
+}
+.center
+{
+    display: flex;
+    justify-content: center;
+}
+.white
+{
+    background-color: white;
+}

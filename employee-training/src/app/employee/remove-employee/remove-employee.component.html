@@ -1,0 +1,17 @@
+<form [formGroup]="employee" >
+<div class="mid">
+    <mat-form-field appearance="outline">
+        <mat-label>Search Employee By Id</mat-label>
+        <input formControlName="emp_id" matInput type="number" required (click)="msg()">
+    </mat-form-field>
+    <button class="button" mat-button (click)="removeEmployee()">Remove</button>
+    <button class="button" mat-button (click)="cancel()">Back</button>
+</div>
+</form>
+
+<div class="alert alert-success" role="alert" *ngIf = "msg_success">
+    Employee with employee Id  {{employee.value['emp_id']}} removed successfully.
+</div> 
+<div class="alert alert-danger" role="alert" *ngIf = "msg_fail">
+    No data found for the employee ID {{employee.value['emp_id']}}
+</div>

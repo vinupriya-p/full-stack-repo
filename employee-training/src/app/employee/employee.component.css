@@ -1,0 +1,22 @@
+.center
+{
+    display: flex;
+    justify-content: center;
+}
+.button 
+{
+    margin: 1rem;
+    background-color: #1482AC;
+    color: white;
+    font-size: 16px;
+}
+.ag-theme-alpine {
+    /* use theme parameters where possible */
+    font-size: 16px;
+
+    --ag-header-foreground-color: white;
+    --ag-header-background-color: #1482AC;
+    --ag-foreground-color: black;
+    --ag-background-color: #D9D9D9;
+ 
+}
